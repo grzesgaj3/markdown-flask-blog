@@ -36,7 +36,7 @@
     </div>
   </nav>
 
-  <main class="container">
+  <main class="container-lg">
     {% block content %}{% endblock %}
   </main>
 
@@ -50,6 +50,25 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"
           crossorigin="anonymous"></script>
+
+  <script>
+    // Small helper: toggle #toc visibility on mobile when the TOC button is clicked
+    document.addEventListener('click', function (e) {
+      if (!e.target) return;
+      var btn = e.target.closest('[data-toggle-toc]');
+      if (!btn) return;
+      var toc = document.getElementById('toc');
+      if (!toc) return;
+      if (toc.style.display === 'block') {
+        toc.style.display = '';
+      } else {
+        toc.style.display = 'block';
+      }
+      // prevent default link behaviour if button was an anchor
+      e.preventDefault();
+    });
+  </script>
+
   {% block extra_scripts %}{% endblock %}
 </body>
 </html>

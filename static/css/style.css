@@ -109,3 +109,87 @@ body {
 .card {
   border-radius: 0.5rem;
 }
+
+/* Hide Markdown header permalink anchors (if any remain) */
+.headerlink {
+  display: none;
+}
+
+/* Post content tweaks for better UI/UX */
+.post-content p {
+  white-space: normal;
+  margin-bottom: 1rem;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+}
+
+.post-content li {
+  margin-bottom: 0.35rem;
+}
+
+/* Make tables scrollable on small screens */
+.post-content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Improve appearance of blockquotes */
+.post-content blockquote {
+  font-style: italic;
+  background: rgba(0,0,0,0.03);
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  margin: 0 0 1rem 0;
+}
+
+/* TOC: sensible max-height with scrolling; hide on small screens */
+#toc {
+  max-height: 420px;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  #toc {
+    display: none;
+  }
+}
+
+/* Subtle button hover for better affordance */
+.btn-outline-secondary {
+  transition: transform 80ms ease, box-shadow 120ms ease;
+}
+.btn-outline-secondary:hover {
+  transform: translateY(-2px);
+}
+
+/* Code blocks: preserve horizontal scroll but allow wrapping inside small containers */
+.post-content pre {
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Card hover lift for better affordance */
+.card {
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* TOC toggle button: subtle smaller appearance */
+.btn[data-toggle-toc] {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Improve header spacing inside posts */
+.post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+  scroll-margin-top: 1rem;
+}

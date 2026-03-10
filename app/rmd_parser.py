@@ -17,7 +17,7 @@ _MD_EXTENSIONS = [
     FencedCodeExtension(),
     CodeHiliteExtension(guess_lang=False, css_class="highlight"),
     TableExtension(),
-    TocExtension(permalink=True),
+    TocExtension(permalink=False),
     "markdown.extensions.extra",
     "markdown.extensions.smarty",
 ]
