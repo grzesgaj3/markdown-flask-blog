@@ -2,7 +2,8 @@
 
 A production-ready Flask blog that serves blog posts written in **R Markdown** (`.Rmd`) format.
 
-![Blog homepage](https://github.com/user-attachments/assets/826595a8-0494-4ed8-b16a-a5665a79023c)
+![Blog homepage](<img width="1832" height="932" alt="image" src="https://github.com/user-attachments/assets/ea4c0c7c-c295-4615-a968-950b3dc832ca" />
+)
 
 ## Features
 
