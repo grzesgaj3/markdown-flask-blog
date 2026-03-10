@@ -1,0 +1,62 @@
+---
+title: "Witaj na blogu R Markdown!"
+date: "2025-03-10"
+author: "Admin"
+description: "Pierwsza demonstracja bloga napędzanego przez Flask i R Markdown. Zobaczymy jak działa renderowanie składni R."
+tags: ["R", "Flask", "demo"]
+---
+
+## Wstęp
+
+Witaj na **R Markdown Blog** – blogu napędzanym przez Flask, który obsługuje wpisy
+pisane w formacie [R Markdown](https://rmarkdown.rstudio.com/).
+
+Każdy wpis jest zwykłym plikiem `.Rmd` umieszczonym w katalogu `posts/`.
+Nagłówek YAML zawiera metadane (tytuł, datę, autora, opis, tagi), a treść
+jest renderowana do HTML po stronie serwera.
+
+## Przykład kodu R
+
+Bloki kodu R zapisane składnią ```` ```{r} ```` są wyświetlane
+ze **podświetlaniem składni**:
+
+```{r}
+# Wczytaj ramkę danych iris
+summary(iris)
+```
+
+```{r histogram, fig.cap="Histogram długości płatków"}
+hist(iris$Petal.Length,
+     main = "Długość płatków irysów",
+     xlab = "Długość (cm)",
+     col  = "#4e9af1")
+```
+
+## Markdown – podstawowe elementy
+
+### Listy
+
+- Flask jako serwer WWW
+- Python-Markdown do renderowania
+- Pygments do podświetlania kodu
+- Gunicorn jako serwer WSGI
+
+### Tabela
+
+| Parametr      | Wartość      |
+|---------------|-------------|
+| Framework     | Flask 3.x   |
+| Format wpisów | R Markdown  |
+| Serwer WSGI   | Gunicorn    |
+| Python        | ≥ 3.10      |
+
+### Cytat
+
+> „Dane to ropa naftowa XXI wieku."
+> — Clive Humby
+
+## Podsumowanie
+
+Blog jest gotowy do działania w środowisku produkcyjnym z Gunicornem.
+Wystarczy dodawać nowe pliki `.Rmd` do katalogu `posts/` i odświeżyć
+stronę — wpis pojawi się automatycznie.
