@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} &mdash; R Markdown Blog{% endblock %}
+{% block meta_description %}{{ post.description }}{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-8 mx-auto">
+    <!-- Back link -->
+    <a href="{{ url_for('blog.index') }}" class="btn btn-sm btn-outline-secondary mb-4">&larr; Powrót do listy</a>
+
+    <article>
+      <header class="mb-4">
+        <h1>{{ post.title }}</h1>
+        <p class="text-muted">
+          {% if post.date %}<span class="me-3">📅 {{ post.date }}</span>{% endif %}
+          {% if post.author %}<span>✍️ {{ post.author }}</span>{% endif %}
+        </p>
+        {% if post.tags %}
+        <p>
+          {% for tag in post.tags %}
+          <span class="badge bg-secondary me-1">{{ tag }}</span>
+          {% endfor %}
+        </p>
+        {% endif %}
+      </header>
+
+      {% if post.toc_html %}
+      <nav id="toc" class="card bg-light mb-4 p-3" aria-label="Spis treści">
+        <h6 class="mb-2 fw-bold">Spis treści</h6>
+        {{ post.toc_html | safe }}
+      </nav>
+      {% endif %}
+
+      <div class="post-content">
+        {{ post.content_html | safe }}
+      </div>
+    </article>
+
+    <hr class="my-5" />
+    <a href="{{ url_for('blog.index') }}" class="btn btn-outline-secondary">&larr; Powrót do listy</a>
+  </div>
+</div>
+{% endblock %}

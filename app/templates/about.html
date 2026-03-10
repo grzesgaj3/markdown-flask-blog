@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}O blogu &mdash; R Markdown Blog{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-8 mx-auto">
+    <h1 class="mb-4">O blogu</h1>
+    <p class="lead">
+      Ten blog jest napędzany przez <strong>Flask</strong> i obsługuje wpisy pisane w formacie
+      <strong>R&nbsp;Markdown</strong> (<code>.Rmd</code>).
+    </p>
+    <h2 class="h4 mt-4">Jak dodać nowy wpis?</h2>
+    <ol>
+      <li>Utwórz plik <code>nazwa-wpisu.Rmd</code> w folderze <code>posts/</code>.</li>
+      <li>
+        Dodaj nagłówek YAML:
+        <pre class="bg-light p-3 rounded"><code>---
+title: "Tytuł wpisu"
+date: "2025-01-01"
+author: "Twoje imię"
+description: "Krótki opis wpisu."
+tags: ["R", "statystyki"]
+---</code></pre>
+      </li>
+      <li>Napisz treść w Markdown. Bloki kodu R możesz umieszczać jako:</li>
+    </ol>
+    <pre class="bg-light p-3 rounded"><code>```{r}
+summary(iris)
+```</code></pre>
+    <p>Bloki kodu są wyświetlane ze <em>podświetlaniem składni</em> dzięki bibliotece Pygments.</p>
+
+    <h2 class="h4 mt-4">Technologie</h2>
+    <ul>
+      <li><a href="https://flask.palletsprojects.com/" rel="noopener noreferrer" target="_blank">Flask</a> – serwer WWW</li>
+      <li><a href="https://python-markdown.github.io/" rel="noopener noreferrer" target="_blank">Python-Markdown</a> – renderowanie Markdown</li>
+      <li><a href="https://pygments.org/" rel="noopener noreferrer" target="_blank">Pygments</a> – podświetlanie składni kodu</li>
+      <li><a href="https://gunicorn.org/" rel="noopener noreferrer" target="_blank">Gunicorn</a> – serwer WSGI dla produkcji</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

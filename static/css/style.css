@@ -1,0 +1,111 @@
+/* ── Custom Blog Styles ── */
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Post content typography */
+.post-content {
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content h2 {
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0.3rem;
+}
+
+/* Code blocks */
+.post-content pre {
+  background: #f4f4f4;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.post-content code {
+  font-family: "Fira Code", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.post-content p > code {
+  background: #e9ecef;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+}
+
+/* Highlight / Pygments */
+.highlight {
+  background: #f8f8f8;
+  border-radius: 0.375rem;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+.highlight pre {
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  background: transparent;
+}
+
+/* Tables */
+.post-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.post-content th,
+.post-content td {
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+}
+
+.post-content thead th {
+  background-color: #e9ecef;
+}
+
+/* Blockquotes */
+.post-content blockquote {
+  border-left: 4px solid #6c757d;
+  padding: 0.5rem 1rem;
+  color: #6c757d;
+  margin-left: 0;
+}
+
+/* TOC */
+#toc ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+#toc a {
+  text-decoration: none;
+  color: #495057;
+}
+
+#toc a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar brand */
+.navbar-brand {
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+/* Cards */
+.card {
+  border-radius: 0.5rem;
+}
